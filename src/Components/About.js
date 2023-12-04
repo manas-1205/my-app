@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import PropTypes from 'prop-types'
 
 // work on enabling the dark mode
+// I've added a comment here
 
 export default function About() {
 
