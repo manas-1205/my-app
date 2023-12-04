@@ -1,24 +1,30 @@
 import logo from './logo.svg';
-import './App.css';
 
-function App() {
+// this app.css is used to style the content inside App()
+// import './App.css';
+
+// importing the navbar,TextForm component
+import Navbar from './Components/Navbar';
+// import TextForm from './Components/TextForm';
+import About from './Components/About';
+import React, { useState } from 'react';
+
+
+// only 1 tag can be returned inside this function app
+// this code inside this App() is called JSX 
+// {} are used to write var names and JS in JSX
+// Babel compiles down JSX to react.createElement() calls
+// passing props in Navbar (title and the about test in navbar) 
+// Now, we want to change with states from app.js only
+
+function App() { 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar title="TextUtils" aboutText="About TextUtils"/>
+      <div className="container my-3">
+        <About/>       
+      </div>
+    </>
   );
 }
 
